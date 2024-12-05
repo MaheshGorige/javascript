@@ -6,11 +6,15 @@ import { at_method } from "./examples/array/at_method.js"
 
 document.querySelector('#app').innerHTML = `
   <div>
-    <h1>Hello Javascript!</h1>
+    <h1 id='header'>Hello Javascript!</h1>
   </div>
 `
 
 
-at_method()
+const headerEl = document.getElementById("header");
 
-console.log("....")
+headerEl.style.color = "red"
+
+// headerEl.addEventListener('click', () => {
+//   alert()
+// })
