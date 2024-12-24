@@ -28,3 +28,28 @@ function lengthOfLongestSubstring(s) {
 // console.log(lengthOfLongestSubstring("bbbbb"));    // Output: 1
 // console.log(lengthOfLongestSubstring("pwwkew"));   // Output: 3
 // console.log(lengthOfLongestSubstring(""));         // Output: 0
+
+
+function longestSubString(){
+    const str = "abcabcbb" // "bbbbb" // "pwwkew" // "abcabcbb";
+    var max = 0;
+    var current = 0;
+    var newStr = []
+    
+    for(var i = 0; i < str.length; i++){
+      if(newStr.indexOf(str[i]) === -1){
+     
+        newStr.push(str[i])
+        current += 1
+        max = Math.max(max, current)
+      } else {
+        current = 0;
+        newStr = []
+      }
+    }
+    
+    return max;
+    
+  }
+  
+  console.log(longestSubString())
